@@ -9,10 +9,6 @@ import {
 } from "../ui/select"
 
 export default function SelectBox() {
-  useEffect(() => {
-    console.count("副作用 select box")
-  })
-  console.count("状態変化 select box")
   return (
     <Select>
       <SelectTrigger className="w-[180px]">
