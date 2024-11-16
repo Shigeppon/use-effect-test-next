@@ -5,16 +5,16 @@ import { Button } from "../ui/button"
 import SelectBox from "./SelectBox"
 import React from "react"
 import { PasswordInput } from "./password-input"
-import { useFaviconBadge } from "@/hooks/useFaviconBadge"
-import { usePageVisibility } from "@/hooks/usePageVIsibility"
+// import { useFaviconBadge } from "@/hooks/useFaviconBadge"
+// import { usePageVisibility } from "@/hooks/usePageVIsibility"
 
 export default function InputForm() {
   const [textState, setTextState] = useState("")
   const [count, setCount] = useState(0)
   const MemorizedSelectBox = React.memo(SelectBox)
 
-  useFaviconBadge(count)
-  const pageVisibility = usePageVisibility()
+  // useFaviconBadge(count)
+  // const pageVisibility = usePageVisibility()
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,9 +23,9 @@ export default function InputForm() {
     }, 5000)
   }, [])
 
-  useEffect(() => {
-    if (pageVisibility) setCount(0)
-  }, [pageVisibility])
+  // useEffect(() => {
+  //   if (pageVisibility) setCount(0)
+  // }, [pageVisibility])
 
   return (
     <>
